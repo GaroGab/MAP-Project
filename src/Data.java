@@ -161,23 +161,6 @@ public class Data
 
     @Override
     public String toString() {
-        /*
-        String attributes= "";
-        for(int i=0;i<attributeSet.length;i++)
-        {
-            attributes=attributes.concat(attributeSet[i].getName());
-            attributes=attributes.concat(",");
-        }
-
-        String[] transactions = new String[numberOfExamples];
-        for(int i=0; i<numberOfExamples; i++)
-        {
-            for(int j=0; j<attributeSet.length; j++)
-            {
-
-            }
-        }
-        */
         String s;
         int i,j;
         s = ""+"\n";
