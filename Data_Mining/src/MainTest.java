@@ -1,10 +1,13 @@
+import data.*;
+import mining.*;
+
 
 public class MainTest {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws OutOfRangeSampleSize {
 		
 		
 		Data data =new Data();
