@@ -21,7 +21,7 @@ public class MainTest {
 		{
 			while (!except_check)
 			{
-				System.out.println("\nInserire il numero di Cluster: ");
+				System.out.println("Inserire il numero di Cluster: ");
 				k = Keyboard.readInt();
 				try
 				{
@@ -33,24 +33,22 @@ public class MainTest {
 				}
 				catch (OutOfRangeSampleSize e)
 				{
-					System.out.println("Valore inserito invalido: ");
-					if (k <= 0)
-					{
-						System.out.println(e.getMessage2());
-					}else
-						//nel caso il numero inserito sia maggiore rispetto al numero di cluster generabili
-					{
-						System.out.println(e.getMessage());
-					}
+					System.out.println(e.getMessage());
 				}
 			}
-			System.out.println("Vuoi ripetere l'esecuzione? y/n");
-			c=Keyboard.readChar();
-			except_check=false;
-			if (c=='n')
+			do
 			{
-				loop_program=false;
-			}
+				System.out.println("Vuoi ripetere l'esecuzione? y/n");
+				c = Keyboard.readChar();
+				if (c == 'n')
+				{
+					loop_program = false;
+				}
+				else if (c == 'y')
+				{
+					except_check = false;
+				}
+			}while(!(c=='n' || c=='y'));
 		}
 
 	}

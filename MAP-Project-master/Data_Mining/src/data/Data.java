@@ -279,9 +279,12 @@ Object[][] data;
 	}
 
 	public int[] sampling(int k) throws OutOfRangeSampleSize{
-		if (k<=0 || k>distinctTuple)
+		if (k<=0)
 		{
-			throw new OutOfRangeSampleSize("Valore invalido: ");
+			throw new OutOfRangeSampleSize("il numero k di cluster è minore o uguale a 0");
+		}else if (k>distinctTuple)
+		{
+			throw new OutOfRangeSampleSize("il numero k di cluster inserito da tastiera è maggiore rispetto al numero di centroidi generabili dall'insieme di transazioni");
 		}
 		else
 		{

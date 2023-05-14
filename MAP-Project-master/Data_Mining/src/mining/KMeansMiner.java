@@ -4,7 +4,9 @@ import data.*;
 public class KMeansMiner {
     private ClusterSet C;
 
-    public KMeansMiner(int k){
+    public KMeansMiner(int k) throws OutOfRangeSampleSize{
+        if (k<=0)
+            throw new OutOfRangeSampleSize("il numero k di cluster è minore o uguale a 0");
         C= new ClusterSet(k);
     }
 
